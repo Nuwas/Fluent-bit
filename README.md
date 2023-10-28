@@ -1,7 +1,9 @@
 # Fluent-bit
 To establish efficient log aggregation and analysis within your Kubernetes cluster, you can set up Fluentbit to seamlessly stream logs from your pods to Elasticsearch, a critical step in configuring your EFK (Elasticsearch, Fluentd, Kibana) stack.
 
-Please flow the below steps for Fluent-bit configuration
+Please execute the below CLIs for Fluent-bit configuration
+
+Files
   1) service-account.yaml
   2) service-endpoint.yaml
   3) role.yaml
