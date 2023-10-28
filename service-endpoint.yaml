@@ -1,0 +1,24 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: elastic-kibana-efix
+  namespace: kube-logging
+spec:
+  clusterIP: None
+  ports:
+  - port: 9200
+
+---
+
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: elastic-kibana-efix
+  namespace: kube-logging
+subsets:
+  - addresses:
+        - ip: 192.168.0.133
+    ports:
+      - port: 9200
+        name: elastic-kibana-efix
+
